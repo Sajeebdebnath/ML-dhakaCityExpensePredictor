@@ -1,0 +1,51 @@
+Gender,Location,RoomMembers,BathroomStatus,BalconyStatus,UtilityBillStatus,MealsTimes,ExtraExpense,TotalExpense
+Male,Dhanmondi,4,Yes,No,Yes,2,1000,7000
+Male,Dhanmondi,3,Yes,No,Yes,3,1500,60000
+Female,Agargaon,2,No,Yes,Yes,3,2000,10000
+Male,Kolabagan,4,No,No,No,2,2500,5500
+Male,Uttara,2,Yes,No,No,2,2500,7000
+Male,Mirpur,3,No,Yes,Yes,3,2000,6500
+Male,Sukrabad ,3,Yes,Yes,No,2,3000,8000
+Female,Dhanmondi,4,No,Yes,Yes,3,3000,11000
+Male,Mohammadpur,2,Yes,Yes,Yes,2,4000,10000
+Male,Shahbagh,3,Yes,No,Yes,3,3000,9000
+Male,Malibagh,4,No,No,No,3,3500,8000
+Male,Shukrabad,3,Yes,No,No,2,2000,7000
+Male,Dhanmondi,3,No,No,Yes,3,3000,9000
+Male,Dhanmondi,2,No,No,No,2,6500,8000
+Male,Shyamoli ,4,Yes,Yes,No,2,2000,14000
+Male,Panthapath,2,Yes,No,No,3,1000,7000
+Male,Shaymoli ,3,No,No,Yes,2,3000,10000
+Male,Shukrabad,2,No,Yes,Yes,2,3000,8000
+Female,Dhanmondi 27,3,Yes,No,Yes,3,2700,11000
+Female,Mirpur,4,No,No,Yes,2,1500,7000
+Female,Framgate,3,Yes,Yes,Yes,2,2000,8000
+Female,Lalmatiya,4,Yes,Yes,No,3,1700,9000
+Female,Gulshan ,3,No,Yes,Yes,3,2500,12000
+Female,Mirpur,2,Yes,Yes,Yes,3,1500,6000
+Male,Framgate,3,Yes,Yes,Yes,2,2000,15000
+Female,Jatrabari ,3,Yes,No,Yes,2,1600,6000
+Female,Azimpur ,3,Yes,No,No,3,1800,10000
+Female,Mohammadpur ,3,Yes,Yes,Yes,2,1200,7000
+Female,Agargaon,2,No,No,No,3,1200,6000
+Female,Kalabagan ,3,Yes,No,No,3,1500,9000
+Female,Malibagh ,4,Yes,Yes,Yes,3,1000,6000
+Female,Saidabad,2,Yes,Yes,No,3,1200,6500
+Female,Shukrabad ,4,No,No,No,3,2000,11000
+Female,Badda,3,No,No,Yes,2,1700,8000
+Female,Gabtoli ,3,No,No,Yes,3,1000,5000
+Male,Uttara,2,Yes,Yes,Yes,3,3000,8000
+Female,Dhanmondi,3,Yes,No,Yes,3,1500,8000
+Male,Mirpur,4,Yes,No,Yes,2,2000,7000
+Male,Lalmatiya,3,No,Yes,No,2,1500,8000
+Female,Jatrabari,3,Yes,Yes,No,3,1000,5500
+Female,Saidabad,3,Yes,Yes,Yes,3,1500,6000
+Female,Agargaon,3,No,Yes,No,3,1200,5500
+Female,Badda,4,Yes,Yes,Yes,3,1500,8000
+Female,Malibagh,3,No,Yes,No,3,1500,6000
+Female,Dhanmondi,3,Yes,Yes,Yes,3,2000,10000
+Female,Agargaon,3,No,No,No,3,1300,6000
+Male,Dhanmondi,4,Yes,No,Yes,2,6000,15000
+Male,Uttara,3,Yes,Yes,No,2,2500,8200
+Male,Kolabagan,2,Yes,No,Yes,2,2100,7900
+Male,Mohammadpur,3,No,No,Yes,2,1670,7200

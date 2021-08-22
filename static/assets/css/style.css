@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+html, body{
+    height: 100%;
+}
+
+
+
+.numberConverter{
+    position: relative;
+    height: 100%;
+}
+.area-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url("https://osome.com/content/images/size/w930/2020/07/Scrabble-Deductible-Expenses-Singapore-Company.webp");
+    background-position: center;
+    background-size: cover;;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.area-bg:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fb0000c7;
+    opacity: 90%;
+    z-index: 1;
+}
+.convert-form {
+    background: white;
+    border-radius: 5px;
+    padding: 40px 50px;
+    box-shadow: 0px 7px 16px 1px #04000082;
+    margin-top: 100px;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    color: #ea0707;
+    text-align: center;
+    position: relative;
+}
+.form-title::after {
+    position: absolute;
+    content: "";
+    background: #ff6262;
+    width: 76%;
+    height: 2px;
+    top: 35px;
+    left: 75px;
+}
+button.convert-btn {
+    border: none;
+    padding: 8px 20px;
+    background: #ea0707;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+}
+.convert-form select, .convert-form input {
+    border: 1px solid #ea0707;
+}
+.prediction {
+    text-align: center;
+    margin-top: 20px;
+    color: #ea0707;
+}

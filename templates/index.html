@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Monthly Expense Predictor in Dhaka City</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    </head>
+    <body>
+        <div class="numberConverter">
+            <div class="area-bg"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="convert-form mb-5">
+                            <div class="form-title">Single Person Monthly Expense Predictor in Dhaka City</div>
+                            <form method="post" id="form">
+                            <div class="form-group mb-4">
+                                <label for="gender" class="mb-2">Select Gender</label>
+                                <select class="form-control" id="gender" name="gender" required>
+                                <option>Select</option>
+                                {% for gender in genders %}
+                                   <option value="{{ gender }}">{{ gender }}</option>
+                                {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="location" class="mb-2">Select Location</label>
+                                <select class="form-control" id="location" required name="location">
+                                <option>Select</option>
+                                {% for location in locations %}
+                                   <option value="{{ location }}">{{ location }}</option>
+                                {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="roommates" class="mb-2">Number of Roommates</label>
+                                <input type="text" class="form-control" id="roommates" name="roommates" placeholder="Enter Number of Roommates" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="bathroom" class="mb-2">Do you Want Attached Bathroom</label>
+                                <select class="form-control" id="bathroom" name="bathroom" required>
+                                {% for bathroom in bathrooms %}
+                                   <option value="{{ bathroom }}">{{ bathroom }}</option>
+                                {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="balcony" class="mb-2">Do you Want Balcony</label>
+                                <select class="form-control" id="balcony" name="balcony" required>
+                                {% for balcony in balconys %}
+                                   <option value="{{ balcony }}">{{ balcony }}</option>
+                                {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="utility" class="mb-2">Is it peferrable if Utitlity Bill Attach with Rent Exepnse</label>
+                                <select class="form-control" id="utility" name="utility" required>
+                                {% for utility in utilityBills %}
+                                   <option value="{{ utility }}">{{ utility }}</option>
+                                {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="meals" class="mb-2">How many times you want to take meals in a day</label>
+                                <input type="text" class="form-control" id="meals" name="meals" placeholder="Enter Number of Meals" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="extraExpense" class="mb-2">Your Expected Extra Exepnse</label>
+                                <input type="text" class="form-control" name="extraExpense" id="extraExpense" placeholder="Enter Your Extra Expense" required>
+                            </div>
+                                <button class="convert-btn text-center" id="predict_btn" onclick="send_data()">Predict Expense</button>
+                            </form>
+
+                            <div class="prediction">
+                                <h4>Prediction Amount: <span id="prediction">0</span> Taka</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            function formHandler(event){
+                event.preventDefault()
+            }
+
+            function send_data(){
+                document.getElementById('form').addEventListener('submit', formHandler)
+
+                var fd = new FormData(document.querySelector('form'))
+
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/predict', true)
+                document.getElementById('prediction').innerHTML = "Waitting for Prediction"
+
+                xhr.onreadystatechange = function(){
+                    if(xhr.readyState == XMLHttpRequest.DONE){
+                        document.getElementById('prediction').innerHTML = xhr.responseText
+                    }
+                }
+
+                xhr.onload = function(){}
+
+                xhr.send(fd)
+            }
+        </script>
+    </body>
+</html>
